@@ -1,0 +1,36 @@
+Cython
+email-validator
+pydantic --no-binary pydantic
+python-dotenv
+python-multipart
+python-slugify
+psycopg2-binary
+SQLAlchemy<1.4.0
+databases[postgresql]
+alembic
+fastapi
+uvicorn[standard]
+bcrypt
+orjson
+jinja2
+redis
+aiofiles
+aiosmtplib
+requests
+Authlib
+httpx
+itsdangerous
+Pillow
+phonenumbers
+fastapi-jwt-auth[asymmetric]
+fastapi-utils
+opencv-python==3.4.13.47
+plantcv==3.11.0
+user-agents
+dhash
+pytz
+
+# testing
+pytest
+pytest-cov
+pytest-asyncio
