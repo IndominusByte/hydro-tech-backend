@@ -12,6 +12,7 @@ from models.ReportModel import report
 from models.ChatModel import chat
 from models.BlogModel import blog
 from models.CategoryDocModel import category_doc
+from models.DocumentationModel import documentation
 
 class OperationTest:
     name = 'testtesttttttt'
@@ -186,3 +187,11 @@ class OperationTest:
         query = select([category_doc]).where(category_doc.c.name == name)
         category_doc_data = await database.fetch_one(query=query)
         return category_doc_data['id']
+
+    # ================ DOCUMENTATION SECTION ================
+
+    @pytest.mark.asyncio
+    async def get_documentation_id(self,title: str):
+        query = select([documentation]).where(documentation.c.title == title)
+        documentation_data = await database.fetch_one(query=query)
+        return documentation_data['id']
