@@ -48,11 +48,11 @@ class Settings(BaseSettings):
 
     @validator('access_expires',always=True)
     def parse_access_expires(cls, v):
-        return int(timedelta(minutes=15).total_seconds())
+        return int(timedelta(days=1).total_seconds())
 
     @validator('access_expires_admin',always=True)
     def parse_access_expires_admin(cls, v):
-        return int(timedelta(hours=3).total_seconds())
+        return int(timedelta(days=1).total_seconds())
 
     @validator('refresh_expires',always=True)
     def parse_refresh_expires(cls, v):
