@@ -18,7 +18,7 @@ class ReportCrud:
     @staticmethod
     async def delete_report(user_id: int) -> None:
         await database.execute(query=report.delete().where(report.c.user_id == user_id))
-        await database.execute(query="ALTER SEQUENCE reports_id_seq RESTART WITH 1")
+        # await database.execute(query="ALTER SEQUENCE reports_id_seq RESTART WITH 1")
 
 class ReportFetch:
     @staticmethod
